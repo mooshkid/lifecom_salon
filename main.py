@@ -9,19 +9,17 @@ import pandas as pd
 
 # start timer 
 start = time.time()
+# timestamp
+timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
 
 # change cwd to the script directory 
 os.chdir(os.path.dirname(__file__))
 path = os.getcwd()
 
-# make new directory with timestamp as the folder name 
-timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-
 
 # webdriver 
 url = 'https://hair-chiba.or.jp/category/salon/'
-
 options = Options()
 options.add_argument('--headless')
 driver = webdriver.Chrome(chrome_options=options)
@@ -32,7 +30,7 @@ driver.get(url)
 url_list = []
 
 
-# Defining function
+# Defining the function
 # loop to find the stores 
 def find_products():
 
@@ -78,10 +76,16 @@ def next_page():
             print("Starting Page: {}...".format(counter))
             time.sleep(5)
 
+
+
 # Call the function 
 next_page()
 
 
-
 df = pd.DataFrame(url_list)
-df.to_csv('test.csv', index=False, header=False)
+df.to_csv(timestamp + '.csv', index=False, header=False)
+
+#print elapsed time
+end = time.time()
+elapsed = end - start
+print('Task Completed in: ' + time.strftime('%H:%M:%S', time.gmtime(elapsed)) + '\n')
