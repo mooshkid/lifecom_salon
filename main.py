@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
@@ -20,7 +21,10 @@ timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
 # webdriver 
 url = 'https://hair-chiba.or.jp/category/salon/'
-driver = webdriver.Chrome()
+
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(chrome_options=options)
 driver.get(url)
 
 
