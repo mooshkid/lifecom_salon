@@ -1,14 +1,13 @@
-# https://stackoverflow.com/questions/33633416/convert-html-table-to-csv-in-python
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+import pandas as pd
 import os, time, datetime
-import csv
+
 
 
 # output file name 
-output_csv = 'store.csv'
+output_csv = 'stores.csv'
 
 # start timer 
 start = time.time()
@@ -29,16 +28,36 @@ driver = webdriver.Chrome(options=options)
 driver.get(url)
 
 
+
 # find the table with all the data 
 table = driver.find_element(By.XPATH, '//*[@id="article"]/div[1]/table')
+tr_name = table.find_element(By.XPATH, 'tbody/tr[1]/td[2]')
+# tr_address =
+# tr_tel =
+# tr_hours =
+# tr_closed =
+# tr_hp = 
+# tr_email = 
+print(tr_name.text)
 
-with open (output_csv, 'w', newline='') as csv_file:
-    wr = csv.writer(csv_file)
-    for row in table.find_elements(By.CSS_SELECTOR, 'tr'):
-        wr.writerow([d.text for d in row.find_elements(By.CSS_SELECTOR, 'td')])
+# Empty list for the 7 'tr's
+tr1 = []
+tr2 = []
+tr3 = []
+tr4 = []
+tr5 = []
+tr6 = []
+tr7 = []
 
 
-#print elapsed time
-end = time.time()
-elapsed = end - start
-print('Task Completed in: ' + time.strftime('%H:%M:%S', time.gmtime(elapsed)) + '\n')
+
+
+
+
+
+# pandas dictionary 
+dict = {'店 名': tr1, '住所': tr2, 'TEL': tr3, '営業時間': tr4, '定休日': tr5, 'HP': tr6, 'Email': tr7}
+df = pd.DataFrame(dict)
+
+df.to_csv(output_csv)
+print(df)

@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
 import os, time, datetime
-import pandas as pd
 
 
 # start timer 
@@ -22,7 +21,7 @@ path = os.getcwd()
 url = 'https://hair-chiba.or.jp/category/salon/'
 options = Options()
 options.add_argument('--headless')
-driver = webdriver.Chrome(chrome_options=options)
+driver = webdriver.Chrome(options=options)
 driver.get(url)
 
 
