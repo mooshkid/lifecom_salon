@@ -25,10 +25,13 @@ fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/s
 # create a empty dataframe with columns definied 
 df_storeinfo = pd.DataFrame(columns=['店名', '住所', 'TEL', '営業時間', '定休日', 'HP', 'Email'])
 
+counter = 0 
 
 # loop through the urls
 for i in fakelist:
 
+    counter += 1
+    print('Starting url(' + str(int(counter)) + '): ' + i)
     # webdriver 
     url = i
     options = Options()
@@ -36,8 +39,7 @@ for i in fakelist:
     driver = webdriver.Chrome(options=options)
     driver.get(url)
 
-
-    # find the table with all the data 
+    # find the table
     table = driver.find_element(By.XPATH, '//*[@id="article"]/div[1]/table')
     rows = table.find_elements(By.XPATH, 'tbody/tr')
 
@@ -47,7 +49,7 @@ for i in fakelist:
         td2 = row.find_element(By.XPATH, 'td[2]').text
         test_list.append(td2)
     
-    
+    # append list to dataframe 
     df_storeinfo.loc[len(df_storeinfo)] = test_list
 
 
