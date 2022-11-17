@@ -9,6 +9,9 @@ import os, time, datetime
 start = time.time()
 # timestamp
 timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+# counter 
+counter = 0 
+
 
 # change cwd to the script directory 
 os.chdir(os.path.dirname(__file__))
@@ -19,25 +22,26 @@ path = os.getcwd()
 output_csv = timestamp + '.csv'
 
 
-fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/salon/1102346/','https://hair-chiba.or.jp/salon/10101/', 'https://hair-chiba.or.jp/salon/1106056/']
-
-
 # create a empty dataframe with columns definied 
 df_storeinfo = pd.DataFrame(columns=['店名', '住所', 'TEL', '営業時間', '定休日', 'HP', 'Email'])
 
-counter = 0 
+
+# webdriver 
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(options=options)
+
+
+fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/salon/1102346/','https://hair-chiba.or.jp/salon/10101/', 'https://hair-chiba.or.jp/salon/1106056/']
 
 # loop through the urls
 for i in fakelist:
 
     counter += 1
-    print('Starting url(' + str(int(counter)) + '): ' + i)
-    # webdriver 
-    url = i
-    options = Options()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome(options=options)
-    driver.get(url)
+    print('Starting(' + str(int(counter)) + '): ' + i)
+
+    # url 
+    driver.get(i)
 
     # find the table
     table = driver.find_element(By.XPATH, '//*[@id="article"]/div[1]/table')
