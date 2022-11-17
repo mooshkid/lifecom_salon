@@ -48,13 +48,14 @@ for i in fakelist:
     rows = table.find_elements(By.XPATH, 'tbody/tr')
 
     # empty list to store the td2 stuff
-    test_list = [] #placed inside the loop here to reset the list for every new page
+    details_list = [] #placed inside the loop here to reset the list for every new page
     for row in rows:
         td2 = row.find_element(By.XPATH, 'td[2]').text
-        test_list.append(td2)
+        details_list.append(td2)
     
     # append list to dataframe 
-    df_storeinfo.loc[len(df_storeinfo)] = test_list
+    df_storeinfo.loc[len(df_storeinfo)] = details_list
+    driver.close()
 
 
 # save df to csv file

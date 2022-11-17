@@ -115,6 +115,7 @@ for i in url_list:
     
     # append list to dataframe 
     df_storeinfo.loc[len(df_storeinfo)] = details_list
+    driver.close()
 
 
 # save df to csv file
