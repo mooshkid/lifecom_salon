@@ -5,30 +5,28 @@ import pandas as pd
 import os, time, datetime
 
 
-# output file name 
-output_csv = 'stores.csv'
-
 # start timer 
 start = time.time()
 # timestamp
 timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-
 
 # change cwd to the script directory 
 os.chdir(os.path.dirname(__file__))
 path = os.getcwd()
 
 
-fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/salon/1102346/']
-# Empty list for the 7 'tr's
-tr1 = []
-tr2 = []
-tr3 = []
-tr4 = []
-tr5 = []
-tr6 = []
-tr7 = []
+# output file name 
+output_csv = timestamp + '.csv'
 
+
+fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/salon/1102346/','https://hair-chiba.or.jp/salon/10101/', 'https://hair-chiba.or.jp/salon/1106056/']
+
+
+# create a empty dataframe with columns definied 
+df_storeinfo = pd.DataFrame(columns=['店名', '住所', 'TEL', '営業時間', '定休日', 'HP', 'Email'])
+
+
+# loop through the urls
 for i in fakelist:
 
     # webdriver 
@@ -41,26 +39,22 @@ for i in fakelist:
 
     # find the table with all the data 
     table = driver.find_element(By.XPATH, '//*[@id="article"]/div[1]/table')
-    tr_name = table.find_element(By.XPATH, 'tbody/tr[1]/td[2]').text
-    tr_address = table.find_element(By.XPATH, 'tbody/tr[2]/td[2]').text
-    tr_tel = table.find_element(By.XPATH, 'tbody/tr[3]/td[2]').text
-    tr_hours = table.find_element(By.XPATH, 'tbody/tr[4]/td[2]').text
-    tr_closed = table.find_element(By.XPATH, 'tbody/tr[5]/td[2]').text
-    tr_hp = table.find_element(By.XPATH, 'tbody/tr[6]/td[2]').text
-    tr_email = table.find_element(By.XPATH, 'tbody/tr[7]/td[2]').text
+    rows = table.find_elements(By.XPATH, 'tbody/tr')
 
-    tr1.append(tr_name)
-    tr2.append(tr_address)
-    tr3.append(tr_tel)
-    tr4.append(tr_hours)
-    tr5.append(tr_closed)
-    tr6.append(tr_hp)
-    tr7.append(tr_email)
+    # empty list to store the td2 stuff
+    test_list = [] #placed inside the loop here to reset the list for every new page
+    for row in rows:
+        td2 = row.find_element(By.XPATH, 'td[2]').text
+        test_list.append(td2)
+    
+    
+    df_storeinfo.loc[len(df_storeinfo)] = test_list
 
 
-# pandas dictionary 
-dict = {'店名': tr1, '住所': tr2, 'TEL': tr3, '営業時間': tr4, '定休日': tr5, 'HP': tr6, 'Email': tr7}
-df = pd.DataFrame(dict)
+# save df to csv file
+df_storeinfo.to_csv(output_csv)
 
-df.to_csv(output_csv)
-print(df)
+#print elapsed time
+end = time.time()
+elapsed = end - start
+print('Task Completed in: ' + time.strftime('%H:%M:%S', time.gmtime(elapsed)) + '\n')
