@@ -26,21 +26,21 @@ output_csv = timestamp + '.csv'
 df_storeinfo = pd.DataFrame(columns=['店名', '住所', 'TEL', '営業時間', '定休日', 'HP', 'Email'])
 
 
-# webdriver 
-options = Options()
-options.add_argument('--headless')
-driver = webdriver.Chrome(options=options)
 
 
 fakelist = ['https://hair-chiba.or.jp/salon/11510/', 'https://hair-chiba.or.jp/salon/1102346/','https://hair-chiba.or.jp/salon/10101/', 'https://hair-chiba.or.jp/salon/1106056/']
+counter_max = len(fakelist)
 
 # loop through the urls
 for i in fakelist:
 
     counter += 1
-    print('Starting(' + str(int(counter)) + '): ' + i)
+    print('Starting(' + str(int(counter)) + '/' + str(int(counter_max)) + '): ' + i)
 
-    # url 
+    # webdriver 
+    options = Options()
+    options.add_argument('--headless')
+    driver = webdriver.Chrome(options=options)
     driver.get(i)
 
     # find the table

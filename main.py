@@ -93,14 +93,20 @@ print('Beginning data extraction...')
 
 # reset counter 
 counter = 0
+# total urls 
+counter_max = len(url_list)
+
 
 # loop through the urls
 for i in url_list:
 
     counter += 1
-    print('Starting url(' + str(int(counter)) + '): ' + i)
+    print('Starting(' + str(int(counter)) + '/' + str(int(counter_max)) + '): ' + i)
 
-    # url 
+    # webdriver 
+    options = Options()
+    options.add_argument('--headless')
+    driver = webdriver.Chrome(options=options)
     driver.get(i)
 
     # find the table
