@@ -16,7 +16,7 @@ path = os.getcwd()
 
 
 # output file name 
-output_csv = timestamp + '.csv'
+output_file = timestamp + '.xlsx'
 
 
 # empty list 
@@ -124,11 +124,11 @@ for i in url_list:
     driver.close()
 
 
-# save df to csv file
-df_storeinfo.to_csv(output_csv)
+# save df to a file
+df_storeinfo.to_excel(output_file)
 
 #print elapsed time
 end = time.time()
 elapsed = end - start
-print('Task Completed in: ' + time.strftime('%H:%M:%S', time.gmtime(elapsed)) + '\n')
-print(output_csv)
+print('Task Completed in: ' + time.strftime('%H:%M:%S', time.gmtime(elapsed)))
+print(output_file)
