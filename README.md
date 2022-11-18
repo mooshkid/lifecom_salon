@@ -1,54 +1,65 @@
-## About the Project
+# Project Title
 
-This project is for Life Communications Sales Department - Touki
+The purpose of this project is to extract all details of the salons from `https://hair-chiba.or.jp/category/salon/`
 
-This repository includes python scripts to download realestate details from a website, extract the necessary information, and then find zipcodes through [Google Maps](https://maps.google.com/).
+## Description
 
-### Dependencies
-
-List of frameworks/librarys used to create this project:
-
--   [Python](https://www.python.org/downloads/)
--   [Selenium](https://selenium-python.readthedocs.io/installation.html)
--   [ChromeDriver](https://chromedriver.chromium.org/downloads)
+An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
-### Prerequisites
+### Dependencies
 
--   [Google Chrome](https://www.google.com/chrome/)
+-   Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+-   ex. Windows 10
 
-1. Create a new profile on chrome.
-2. Save the login details for [https://www.touki.or.jp/TeikyoUketsuke/](https://www.touki.or.jp/TeikyoUketsuke/) on your new chrome profile.
+### Installing
 
-## Usage
+-   How/where to download your program
+-   Any modifications needed to be made to files/folders
 
-### 1. Create touki\_.xslx with sheet 'script' and headers 'text' & '#'
+### Executing program
 
-### 2. Run touki.py
+-   How to run the program
+-   Step-by-step bullets
 
-### 3. Save error.txt for later
+```
+code blocks for commands
+```
 
-### 4. Convert the Downloaded PDFs to Excel
+## Help
 
-### 5. Run data.py
+Any advise for common problems or issues.
 
-### 6. Run zip.py
-
-## Contributions
-
-Contributions are welcomed and greatly appreciated!
-
-If you have any suggestions, please fork the repo and create a pull request or open an issue.
-
-Thanks!
-
-## License
-
-Distributed under the MOOSHKID License. See LICENSE.txt for more information.
+```
+command to run if program contains helper info
+```
 
 ## Authors
 
-Masa Yamanaka - yamanaka@lcom-group.jp
+Contributors names and contact info
 
-Project Link: [https://github.com/mooshkid/lifecom_touki](https://github.com/mooshkid/lifecom_touki)
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+## Version History
+
+-   0.2
+    -   Various bug fixes and optimizations
+    -   See [commit change]() or See [release history]()
+-   0.1
+    -   Initial Release
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+
+-   [awesome-readme](https://github.com/matiassingers/awesome-readme)
+-   [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+-   [dbader](https://github.com/dbader/readme-template)
+-   [zenorocha](https://gist.github.com/zenorocha/4526327)
+-   [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
