@@ -17,8 +17,7 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
--   How to run the program
--   Step-by-step bullets
+-  run `main.py`
 
 ```
 py main.py
@@ -27,10 +26,7 @@ py main.py
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Masa Yamanaka - [yamanaka@lcom-group.jp](yamanaka@lcom-group.jp)
 
 ## Version History
 
