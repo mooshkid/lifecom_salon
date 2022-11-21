@@ -51,7 +51,5 @@ This project is licensed under the [MOOSHKID] License - see the LICENSE.md file 
 Inspiration, code snippets, etc.
 
 -   [https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link](https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link)
--   [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
--   [dbader](https://github.com/dbader/readme-template)
--   [zenorocha](https://gist.github.com/zenorocha/4526327)
--   [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+-   [https://stackoverflow.com/questions/54862426/python-selenium-get-href-value](https://stackoverflow.com/questions/54862426/python-selenium-get-href-value)
+-   [https://sparkbyexamples.com/pandas/how-to-append-row-to-pandas-dataframe/](https://sparkbyexamples.com/pandas/how-to-append-row-to-pandas-dataframe/)
