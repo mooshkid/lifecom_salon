@@ -14,10 +14,6 @@ An in-depth paragraph about your project and overview of use.
 -   ChromeDriver
 -   Pandas
 
-### Installing
-
--   How/where to download your program
--   Any modifications needed to be made to files/folders
 
 ### Executing program
 
@@ -38,15 +34,17 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 ## Version History
 
--   0.2
+-   2.0
+    -   Combined `salon_url.py` and `salon_details.py` into one `main.py` script.
+-   1.1
     -   Various bug fixes and optimizations
     -   See [commit change]() or See [release history]()
--   0.1
+-   1.0
     -   Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [MOOSHKID] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
