@@ -1,12 +1,15 @@
-# Project Title
+# Python Selenium - Hair Salon
 
-The purpose of this project is to extract all salon details from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/)
+The purpose of this project is to extract the salon details from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/), into an excel.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The script first creates a list of all the salon page urls. Then it will scrape the details table found on each page into a pandas data frame to be output as a excel/csv file format. 
 
 ## Getting Started
+
+### Prerequisites
+Python enviroment with dependencies installed.
 
 ### Dependencies
 
