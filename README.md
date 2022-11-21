@@ -48,7 +48,7 @@ This project is licensed under the [MOOSHKID] License - see the LICENSE.md file 
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+References...
 
 -   [https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link](https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link)
 -   [https://stackoverflow.com/questions/54862426/python-selenium-get-href-value](https://stackoverflow.com/questions/54862426/python-selenium-get-href-value)
