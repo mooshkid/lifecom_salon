@@ -10,8 +10,9 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
--   Describe any prerequisites, libraries, OS version, etc., needed before installing program.
--   ex. Windows 10
+-   Selenium
+-   ChromeDriver
+-   Pandas
 
 ### Installing
 
@@ -24,16 +25,9 @@ An in-depth paragraph about your project and overview of use.
 -   Step-by-step bullets
 
 ```
-code blocks for commands
+py main.py
 ```
 
-## Help
-
-Any advise for common problems or issues.
-
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
