@@ -1,6 +1,6 @@
 # Project Title
 
-The purpose of this project is to extract all details of the salons from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/)
+The purpose of this project is to extract all salon details from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/)
 
 ## Description
 
