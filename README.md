@@ -1,6 +1,6 @@
 # Python Selenium - Hair Salon
 
-The purpose of this project is to extract salon details from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/).
+The purpose of this project is to extract all salon details from [https://hair-chiba.or.jp/category/salon](https://hair-chiba.or.jp/category/salon/).
 
 ## Description
 
