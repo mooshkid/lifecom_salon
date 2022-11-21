@@ -50,7 +50,7 @@ This project is licensed under the [MOOSHKID] License - see the LICENSE.md file 
 
 Inspiration, code snippets, etc.
 
--   [awesome-readme](https://github.com/matiassingers/awesome-readme)
+-   [[awesome-readme](https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link)]([https://github.com/matiassingers/awesome-readme](https://stackoverflow.com/questions/51176690/looping-over-pages-until-it-cant-find-the-next-link))
 -   [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 -   [dbader](https://github.com/dbader/readme-template)
 -   [zenorocha](https://gist.github.com/zenorocha/4526327)
